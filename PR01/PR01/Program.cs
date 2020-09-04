@@ -1,12 +1,20 @@
-﻿using System;
-
-namespace PR01
+﻿namespace PR01
 {
-  class Program
+  struct Person
   {
-    static void Main(string[] args)
+    public string firstName;
+    public string lastName;
+    public int age;
+
+    public Person(string _firstName, string _lastName, int _age)
     {
-      Console.WriteLine("Hello World!");
+      firstName = _firstName;
+      lastName = _lastName; age = _age;
     }
+    public override string ToString()
+    {
+      return firstName + " " + lastName + ", age " + age;
+    }
+    Person p = new Person("Tony", "Allen", 32); Console.WriteLine(p);
   }
 }
